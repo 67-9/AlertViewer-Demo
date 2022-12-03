@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">        
         <title>Custom Alert Viewer Demo</title>
-        <link rel="stylesheet" href="/leaflet/leaflet.css">
-        <script src="/leaflet/leaflet.js"></script>       
+        <link rel="stylesheet" href="/AlertViewer-Demo/leaflet/leaflet.css">
+        <script src="/AlertViewer-Demo/leaflet/leaflet.js"></script>       
         <!-- <script src="/Leaflet.markercluster-1.4.1/dist/leaflet.markercluster.js"></script> -->
-        <script src="/leaflet-button-master/L.Control.Button.js""></script>
+        <script src="/AlertViewer-Demo/leaflet-button-master/L.Control.Button.js""></script>
         <!-- <link rel="cluster style" href="/Leaflet.markercluster-1.4.1/dist/MarkerCluster.css"> -->
         <style>
 
@@ -161,13 +161,13 @@
             
             //adding alarm icon
             var alarmIcon = L.icon({
-                iconUrl: '/images/alarm.png',
+                iconUrl: '/AlertViewer-Demo/images/alarm.png',
                 iconSize: [15,15]
             });
             
             //adding building icon
             var buildingIcon = L.icon({
-                iconUrl: '/images/building.png',
+                iconUrl: '/AlertViewer-Demo/images/building.png',
                 iconSize: [20,20]
             });
 
@@ -215,7 +215,7 @@
         //     });
         
         //loading countries geojson file
-        fetch("/data/countries.geojson")
+        fetch("/AlertViewer-Demo/data/countries.geojson")
         .then(function(response) {
             return response.json();
         })
@@ -296,8 +296,8 @@
                             // html = 
                             //         '<div class="legend-primary">' +
                             //             '<b>Legend</b>' + '<br><br>' +
-                            //             '<img class="image" src="/images/alarm.png" alt="image is not available"><br>alert<br><br>' +
-                            //             '<img class="image" src="/images/building.png" alt="image is not available"><br>Asset<br>' +
+                            //             '<img class="image" src="/AlertViewer-Demo/images/alarm.png" alt="image is not available"><br>alert<br><br>' +
+                            //             '<img class="image" src="/AlertViewer-Demo/images/building.png" alt="image is not available"><br>Asset<br>' +
                             //         '</div>'
                             let div = L.DomUtil.create("div", "alert-viewer");
                             div.innerHTML = alert_view_html
@@ -466,7 +466,7 @@
             .getElementById("myRange")
             .addEventListener("change", mapUpdater);       
         
-        fetch("/data/buildings.geojson")
+        fetch("/AlertViewer-Demo/data/buildings.geojson")
             .then(function(response) {
                 return response.json();
             })
@@ -504,8 +504,8 @@
                     html = 
                             '<div class="legend-primary">' +
                                 '<b>Legend</b>' + '<br><br>' +
-                                '<img class="image" src="/images/alarm.png" alt="image is not available"><br>Alert<br><br>' +
-                                '<img class="image" src="/images/building.png" alt="image is not available"><br>Asset<br>' +
+                                '<img class="image" src="/AlertViewer-Demo/images/alarm.png" alt="image is not available"><br>Alert<br><br>' +
+                                '<img class="image" src="/AlertViewer-Demo/images/building.png" alt="image is not available"><br>Asset<br>' +
                             '</div>'
                     let div = L.DomUtil.create("div");
                     div.innerHTML = html
