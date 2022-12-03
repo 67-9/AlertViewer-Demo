@@ -87,7 +87,7 @@
 
             /* The slider itself */
             .slider {
-              /* width: 95%;  */
+              width: 95%; 
               /* height: 50%;  */
               background-color: rgb(31, 31, 31);
               cursor: pointer;
@@ -264,7 +264,7 @@
                     html = '<legend class="checkbox-title">Select alert types and then click submit to update the map.</legend><br>';
                     alert_values_array.forEach(function(element) {
                         html += 
-                            '<input type="checkbox" class="mini-checkbox" name="mainCheckbox" value="' + element + '" id="' + element + '" checked>' + '<label for="' + element + '">' + element + "<br></label>" + '<input type="range" class="slider" min="0" max="20000" value="4000" step="50" oninput="showVal(this.value)" id="myRange"><br>'
+                            '<input type="checkbox" class="mini-checkbox" name="mainCheckbox" value="' + element + '" id="' + element + '" checked>' + '<label for="' + element + '">' + element + "<br></label><br>"
 
                     });
                     // console.log(html)
